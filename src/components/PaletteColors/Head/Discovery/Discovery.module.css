@@ -1,0 +1,23 @@
+.discovery {
+  padding-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-flow: wrap;
+}
+
+@media screen and (max-width: 1088px) {
+  .palette__grid {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}
+@media screen and (max-width: 746px) {
+  .palette__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media screen and (max-width: 416px) {
+  .palette__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

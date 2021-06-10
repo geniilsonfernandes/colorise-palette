@@ -1,0 +1,28 @@
+.palette__grid{
+    padding: 38px 0;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 16px;
+}
+
+.grid__item{
+    grid-column-start: span 3;
+}
+
+
+
+@media screen and (max-width: 1088px) {
+    .palette__grid{
+        grid-template-columns: repeat(9, 1fr);
+    }
+  }
+  @media screen and (max-width: 746px) {
+    .palette__grid{
+        grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  @media screen and (max-width: 416px) {
+    .palette__grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }

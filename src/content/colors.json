@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "slug": "Blue clear",
+    "colors": ["1A77D0", "4C93D9", "65A1DF", "76AEE8", "C1D8F0"]
+  },
+  {
+    "id": 2,
+    "slug": "Sky end",
+    "colors": ["67595E", "A49393", "EED6D3", "E8B4B8", "FFA384"]
+  },
+  {
+    "id": 3,
+    "slug": "Avocado Clear",
+    "colors": ["59981A", "81B622", "3D550C", "F8EA8C", "F9F0B4"]
+  },
+  {
+    "id": 4,
+    "slug": "Moon",
+    "colors": ["C3E0E5", "274472", "41729F", "76AEE8", "145DA0"]
+  },
+  {
+    "id": 5,
+    "slug": "Magic",
+    "colors": ["E1C340", "4CD7D0", "A4E8E0", "F8EA8C", "FFA384"]
+  },
+  {
+    "id": 6,
+    "slug": "Deep Space",
+    "colors": ["7EC8E3", "0000FF", "000C66", "050A30"]
+  },
+  {
+    "id": 7,
+    "slug": "Mad Max",
+    "colors": ["023F51", "026474", "F4D327", "EABA3A", "BE7D27"]
+  },
+  {
+    "id": 8,
+    "slug": "Interstellar",
+    "colors": ["E0ECEC", "B8E7EE", "203A47", "92A4A3", "374243"]
+  },
+  {
+    "id": 9,
+    "slug": "Circus",
+    "colors": ["D40941", "037A96", "F4D327", "FB42A2"]
+  },
+  {
+    "id": 10,
+    "slug": "Valetines day",
+    "colors": ["601414", "94254C", "D63697", "CF45D0", "F46BFD"]
+  }
+]

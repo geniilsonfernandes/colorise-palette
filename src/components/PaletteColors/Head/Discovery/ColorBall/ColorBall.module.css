@@ -1,0 +1,15 @@
+.discovery__ball {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+
+    border-radius: 50%;
+    transition: ease-in-out 300ms;
+    cursor: pointer;
+  }
+  .discovery__ball:hover {
+    transform: scale(1.1);
+  }
+
+
+  
