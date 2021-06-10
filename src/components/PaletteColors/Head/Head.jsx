@@ -5,10 +5,8 @@ import discovery from "../../../content/discovery.json";
 const Head = () => {
   return (
     <div className={styles.head}>
-      <h1>Trending color palettes</h1>
-      <p>
-        For endless color palette ideas, visit our color combinations resource
-      </p>
+      <h1>Colors for your creations</h1>
+      <p>Endless ideas for color palettes and color combinations and fonts</p>
       <Discovery discovery={discovery} />
     </div>
   );
