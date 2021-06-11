@@ -34,5 +34,6 @@
 position: absolute;
 z-index: -1;
 opacity: 0;
+font-size: 1px;
 user-select: none;
 }

@@ -1,7 +1,7 @@
 .palette__grid{
-    padding: 38px 0;
+
     display: grid;
-    grid-template-columns: repeat(15, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: 16px;
 }
 

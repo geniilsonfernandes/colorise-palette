@@ -2,8 +2,12 @@
   max-width: 1416px;
   margin: 0 auto;
   padding: 0 16px;
+  width: 100%;
 }
-
+.containerFluid{
+  padding: 0 16px;
+  width: 100%;
+}
 
 @media screen and (max-width: 1088px) {
   .container  {
