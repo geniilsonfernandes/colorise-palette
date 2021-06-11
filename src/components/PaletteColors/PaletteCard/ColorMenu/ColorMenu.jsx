@@ -1,27 +1,26 @@
 import React from "react";
 import { downloadSVG } from "../../../../utilities/downloadSVG";
-import { DownloadIcon, HeartIcon } from "../../../icons/Icons";
+import { DownloadIcon, FavoriteIcon } from "../../../icons/Icons";
+import ButtonsSmall from "../../../Helpers/Buttons/ButtonsSmall/ButtonsSmall";
 import styles from "./ColorMenu.module.css";
 
 const ColorMenu = ({ colors, slug, id, toggleFavorite, isfavorite }) => {
+  function buttonDownload() {
+    downloadSVG(colors, slug);
+  }
+
   return (
     <div className={styles.card__menu}>
-      <div className={styles.card__name}>{slug}</div>
-      <div className={styles.card__btn}>
-        <div
-          className={styles.like__btn}
-          onClick={() => toggleFavorite(id)}
-          data-favorite={isfavorite(id)}
-        >
-          <HeartIcon /> <span>12</span>
-        </div>
-        <div
-          className={styles.svg__btn}
-          onClick={() => downloadSVG(colors, slug)}
-        >
+      <div className={styles.card__name}> {slug}</div>
+
+      <div className={styles.card__buttons}>
+        <ButtonsSmall onClick={buttonDownload}>
           <DownloadIcon />
-          <span>SVG</span>
-        </div>
+        </ButtonsSmall>
+
+        <ButtonsSmall>
+        <FavoriteIcon />
+        </ButtonsSmall>
       </div>
     </div>
   );

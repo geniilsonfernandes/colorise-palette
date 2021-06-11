@@ -1,0 +1,28 @@
+.nav {
+  height: 56px;
+  border-bottom: 1px solid var(--border-bottom-color);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  max-width: 500px;
+  width: 100%;
+
+}
+
+@media screen and (max-width: 746px) {
+  .logo {
+    display: none;
+  }
+  .search {
+    padding-right: 8px;
+  }
+}

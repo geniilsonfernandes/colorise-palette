@@ -9,11 +9,15 @@ const PaletteCard = (props) => {
   return (
     <div className={styles.card}>
       <div className={styles.card__colors}>
+        
         {colors.map((color) => (
           <ColorBar key={color} color={color} />
         ))}
+
       </div>
+
       <ColorMenu colors={colors} slug={slug} id={id} {...props} />
+      
     </div>
   );
 };

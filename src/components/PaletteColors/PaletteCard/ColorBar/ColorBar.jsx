@@ -7,6 +7,7 @@ const ColorBar = ({ color }) => {
   const colorCodeText = useRef("");
 
   function copyColorCode() {
+    
     const input = colorCodeText.current;
     input.select();
     input.setSelectionRange(0, 99999);

@@ -1,0 +1,15 @@
+.buttonsSmall{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    background: #F6F5F5;
+    transition: ease-in-out 300ms;
+    cursor: pointer;
+}
+.buttonsSmall:hover{
+    box-shadow: 0 0 0 1px #e7e5e5;
+}
