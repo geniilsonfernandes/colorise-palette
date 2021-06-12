@@ -7,13 +7,31 @@
 :root {
   --color-bg: #fdfdfd;
   --color-text: #3b4655;
-  --color-text-primary: #7a858c;
-
+  --color-text-primary: #e44b0f;
+  --divisor: #f0f1f1;
   --box--color-shadow: 0px 4px 6px 1px rgba(203, 203, 203, 0.15);
   --border-bottom-color: #f0f1f1;
+
+
+
+  --divisor: #f0f1f1;
+  --clr-buttons--background: #f6f5f5;
+  --clr-border-bottom-color: #e7e5e5;
+  --clr-buttons--background-hover: #e9e9e9;
+
+  --clr-text-primary: #3b4655;
+  --clr-text-secundary: #7a858c;
+  --clr-tooltip-background: #3b4655;
 }
 
 body {
   background: var(--color-bg);
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
+}
+
+p,
+a,
+button,
+input {
+  font-family: Rubik;
 }

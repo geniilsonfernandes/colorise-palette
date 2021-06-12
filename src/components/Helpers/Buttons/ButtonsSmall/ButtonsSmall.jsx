@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ButtonsSmall.module.css";
+import Tooltip from "../../Tooltip/Tooltip";
 
-const ButtonsSmall = ({ children, onClick }) => {
+const ButtonsSmall = ({ children, onClick, label }) => {
+  const [showToolTip, setShowToolTip] = useState(false);
+
   return (
-    <div className={styles.buttonsSmall} onClick={onClick && onClick}>
+    <button
+      className={styles.buttonsSmall}
+      onClick={onClick && onClick}
+      onMouseOver={() => setShowToolTip(true)}
+      onMouseLeave={() => setShowToolTip(false)}
+      role={label}
+    >
       {children}
-    </div>
+      {showToolTip && label && <Tooltip label={label} />}
+    </button>
   );
 };
 

@@ -1,11 +1,11 @@
 import React from "react";
 import PaletteCard from "../PaletteCard/PaletteCard";
 import styles from "./PaletteGrid.module.css";
-import colors from "../../../content/colors.json";
-import { useFavorite } from "../../../Hook/useFavorite";
+import { useColors } from "../../../Hook/colors";
 
 const PaletteGrid = () => {
-  const { toggleFavorite, isfavorite } = useFavorite();
+  const { colors } = useColors();
+
   return (
     <div className={styles.palette__grid}>
       {colors.map((colors) => (
@@ -14,8 +14,6 @@ const PaletteGrid = () => {
             colors={colors.colors}
             slug={colors.slug}
             id={colors.id}
-            toggleFavorite={toggleFavorite}
-            isfavorite={isfavorite}
           />
         </div>
       ))}

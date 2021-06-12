@@ -8,10 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.color__bar:hover {
-  width: 150%;
+  border-radius: 8px;
 }
 
 .copy {
@@ -36,5 +33,4 @@
   opacity: 0;
   font-size: 1px;
   user-select: none;
-  
 }

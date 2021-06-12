@@ -1,0 +1,11 @@
+.footer {
+  padding: 48px 0;
+  border-top: 1px solid var(--divisor);
+}
+
+.about {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--clr-text-secundary);
+  text-align: center;
+}
