@@ -9,6 +9,8 @@
     background: #F6F5F5;
     transition: ease-in-out 300ms;
     cursor: pointer;
+    position: relative;
+    border: none;
 }
 .buttonsSmall:hover{
     box-shadow: 0 0 0 1px #e7e5e5;

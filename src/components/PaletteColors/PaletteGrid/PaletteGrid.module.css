@@ -2,7 +2,8 @@
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 16px;
+    gap: 32px;
+    padding-bottom: 48px;
 }
 
 .grid__item{

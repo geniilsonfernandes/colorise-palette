@@ -14,11 +14,10 @@ function creatSvg(colors) {
     .join("");
   svg.innerHTML = rect;
 
-  console.log(svg);
   return svg;
 }
 
-export function downloadSVG(colors,slug) {
+export function downloadSVG(colors, slug) {
   const svg = creatSvg(colors);
   const base64doc = btoa(unescape(encodeURIComponent(svg.outerHTML)));
   const a = document.createElement("a");

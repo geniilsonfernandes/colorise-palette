@@ -1,0 +1,33 @@
+.tooltip {
+  background: var(--clr-tooltip-background);
+  display: inline-flex;
+  padding: 4px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1;
+  top: -10px;
+  left: 50%;
+  transform: translateY(-100%) translateX(-50%);
+  opacity: 0;
+  animation: into 300ms ease-in-out forwards;
+}
+@keyframes into {
+  to {
+    opacity: 1;
+  }
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  bottom: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  background: var(--clr-tooltip-background);
+}

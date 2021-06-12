@@ -1,21 +1,37 @@
 .nav {
   height: 56px;
-  border-bottom: 1px solid var(--border-bottom-color);
+  border-bottom: 1px solid var(--divisor);
   display: flex;
   align-items: center;
   width: 100%;
+  position: fixed;
+  background: var(--color-bg);
+  z-index: 5;
+  top: 0;
+  left: 0;
 }
 
 .nav__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
+.logo {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: flex-start;
+}
 .search {
   max-width: 500px;
   width: 100%;
+  flex: 1 1 100%;
+}
 
+.buttons {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 746px) {

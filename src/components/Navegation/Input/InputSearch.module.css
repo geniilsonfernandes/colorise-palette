@@ -1,12 +1,12 @@
 .input {
   height: 32px;
-  background: #f6f5f5;
+  background: var(--clr-buttons--background);
   width: 100%;
-
+  border-radius: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8px;
+  overflow: hidden;
   transition: 200ms ease-in-out;
 }
 
@@ -16,10 +16,17 @@
   border: none;
   background: transparent;
   font-family: Rubik;
-  width: 80%;
+  width: 100%;
+  padding-left: 8px;
+  transition: 200ms ease-in-out;
 }
 .input:hover {
-  box-shadow: 0 0 0 1px #e7e5e5;
+  box-shadow: 0 0 0 1px var(--clr-border-bottom-color);
+}
+.input input:hover,
+.input input:focus,
+.input input:active {
+  background: var(--clr-buttons--background-hover);
 }
 
 .input input::placeholder {
@@ -29,4 +36,11 @@
   font-size: 12px;
 
   color: #7a858c;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+  padding: 8px;
 }

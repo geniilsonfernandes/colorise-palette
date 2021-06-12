@@ -1,0 +1,45 @@
+.head {
+  padding-top: 48px;
+  margin-top: 56px;
+  padding-bottom: 32px;
+  z-index: 1;
+
+  width: 100%;
+}
+.head__info h2 {
+  font-family: Rubik;
+  font-weight: 300;
+  font-size: 32px;
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.paletes__tittle {
+  font-family: Rubik;
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.color__grid {
+  width: 100%;
+  height: 240px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(203, 203, 203, 0.28);
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  transition: 200ms ease-in-out;
+}
+
+[data-scroll="true"] {
+  height: 80px;
+}
+
+.item {
+  width: 100%;
+}

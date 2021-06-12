@@ -1,9 +1,10 @@
 .card {
   transition: 150ms ease-in-out;
   cursor: pointer;
-  
-}
-
+  outline: none;
+  border: none;
+  border-radius: 8px;
+} 
 
 .card__colors {
   display: flex;

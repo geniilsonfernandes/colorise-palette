@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import styles from "./ColorBar.module.css";
+import styles from "./ColorCard.module.css";
 
-const ColorBar = ({ color }) => {
+const ColorCard = ({ color }) => {
   const [colorCode, setColorCode] = useState(color);
   const [copied, setCopied] = useState(false);
   const colorCodeText = useRef("");
@@ -39,4 +39,4 @@ const ColorBar = ({ color }) => {
   );
 };
 
-export default ColorBar;
+export default ColorCard;

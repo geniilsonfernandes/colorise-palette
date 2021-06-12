@@ -4,7 +4,7 @@ import { LogoIcon, FavoriteIcon } from "../icons/Icons";
 import ButtonsSmall from "../Helpers/Buttons/ButtonsSmall/ButtonsSmall";
 import InputSearch from "./Input/Input";
 import styles from "./Navegation.module.css";
-const Navegation = () => {
+const Navegation = ( ) => {
   return (
     <nav className={styles.nav}>
       <Container>
@@ -16,10 +16,11 @@ const Navegation = () => {
           <div className={styles.search}>
             <InputSearch placeholder="Search for color name or code" />
           </div>
-
-          <ButtonsSmall>
-            <FavoriteIcon />
-          </ButtonsSmall>
+          <div className={styles.buttons}>
+            <ButtonsSmall>
+              <FavoriteIcon />
+            </ButtonsSmall>
+          </div>
         </div>
       </Container>
     </nav>
