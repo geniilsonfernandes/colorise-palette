@@ -1,16 +1,9 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   background: var(--color-bg);
   z-index: 1;
 }
-.content {
-  margin-top: 454px;
-}
+
 .head {
-  font-family: Rubik;
   font-weight: normal;
   font-size: 16px;
 

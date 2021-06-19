@@ -26,12 +26,12 @@
 
 body {
   background: var(--color-bg);
-  font-family: "Rubik", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 p,
 a,
 button,
 input {
-  font-family: Rubik;
+  font-family: 'Inter', sans-serif;
 }

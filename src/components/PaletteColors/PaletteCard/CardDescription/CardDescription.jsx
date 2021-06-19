@@ -2,10 +2,10 @@ import React from "react";
 import { downloadSVG } from "../../../../utilities/downloadSVG";
 import { DownloadIcon, FavoriteIcon } from "../../../icons/Icons";
 import ButtonsSmall from "../../../Helpers/Buttons/ButtonsSmall/ButtonsSmall";
-import styles from "./ColorMenu.module.css";
+import styles from "./CardDescription.module.css";
 import { Link } from "react-router-dom";
 
-const ColorMenu = ({ colors, slug,id}) => {
+const CardDescription = ({ colors, slug, id }) => {
   function buttonDownload() {
     downloadSVG(colors, slug);
   }
@@ -29,4 +29,4 @@ const ColorMenu = ({ colors, slug,id}) => {
   );
 };
 
-export default ColorMenu;
+export default CardDescription;

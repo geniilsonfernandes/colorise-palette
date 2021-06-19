@@ -6,7 +6,10 @@ import PaletteGrid from "./PaletteGrid/PaletteGrid";
 const PaletteColors = () => {
   return (
     <Container>
-      <Head />
+      <Head
+        title="Colors for your creations"
+        subtitle="Endless ideas for color palettes and color combinations and fonts"
+      />
       <PaletteGrid />
     </Container>
   );

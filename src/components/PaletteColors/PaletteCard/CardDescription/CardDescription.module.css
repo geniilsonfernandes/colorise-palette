@@ -7,9 +7,8 @@
   border-radius: 0 0 8px 8px;
   box-shadow: var(--box--color-shadow);
   position: relative;
-  height: 44px;
+  height: 56px;
 }
-
 
 .card__buttons {
   display: flex;
@@ -30,19 +29,16 @@
 }
 
 .card__name {
-
-
   display: flex;
   align-items: center;
-
   background: #fff;
   width: 100%;
   transition: 150ms ease-in-out;
+  padding-left: 4px;
 }
 
 .card__name a{
   text-decoration: none;
-  font-family: "Rubik", sans-serif;
   font-weight: normal;
   font-size: 14px;
   color: var(--clr-text-secundary);

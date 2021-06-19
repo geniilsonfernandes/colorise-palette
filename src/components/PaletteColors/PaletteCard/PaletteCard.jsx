@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./PaletteCard.module.css";
-import ColorBar from "./ColorBar/ColorBar";
-import ColorMenu from "./ColorMenu/ColorMenu";
+import CardColorBar from "./CardColorBar/CardColorBar";
+import CardDescription from "./CardDescription/CardDescription";
 
 const PaletteCard = (props) => {
   const { colors, slug, id } = props;
@@ -10,10 +10,10 @@ const PaletteCard = (props) => {
     <div className={styles.card}>
       <div className={styles.card__colors}>
         {colors.map((color) => (
-          <ColorBar key={color} color={color} />
+          <CardColorBar key={color} color={color} />
         ))}
       </div>
-      <ColorMenu colors={colors} slug={slug} id={id} {...props} />
+      <CardDescription colors={colors} slug={slug} id={id} {...props} />
     </div>
   );
 };

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import styles from "./InputSearch.module.css";
+import styles from "./SearchInput.module.css";
 import { LoupeIcon } from "../../icons/Icons";
-const InputSearch = ({ placeholder }) => {
+
+
+const SearchInput = ({ placeholder }) => {
   const [value, setValue] = useState("");
 
   return (
@@ -19,4 +21,4 @@ const InputSearch = ({ placeholder }) => {
   );
 };
 
-export default InputSearch;
+export default SearchInput;

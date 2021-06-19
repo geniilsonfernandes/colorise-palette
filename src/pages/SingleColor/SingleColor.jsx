@@ -22,7 +22,7 @@ const SingleColor = () => {
         </Container>
       </header>
       <Container>
-        <main className={styles.content}>
+        <main>
           <div className={styles.head}>Related Palettes</div>
           <PaletteGrid />
         </main>

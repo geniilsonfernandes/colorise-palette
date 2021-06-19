@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import styles from "./ButtonsSmall.module.css";
+import styles from "./ButtonsMedium.module.css";
 import Tooltip from "../../Tooltip/Tooltip";
 
-const ButtonsSmall = ({ children, onClick, label }) => {
+const ButtonsMedium = ({ children, onClick, label }) => {
   const [showToolTip, setShowToolTip] = useState(false);
 
   return (
@@ -11,7 +11,6 @@ const ButtonsSmall = ({ children, onClick, label }) => {
       onClick={onClick && onClick}
       onMouseOver={() => setShowToolTip(true)}
       onMouseLeave={() => setShowToolTip(false)}
-      
     >
       {children}
       {showToolTip && label && <Tooltip label={label} />}
@@ -19,4 +18,4 @@ const ButtonsSmall = ({ children, onClick, label }) => {
   );
 };
 
-export default ButtonsSmall;
+export default ButtonsMedium;
