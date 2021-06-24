@@ -4,7 +4,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { screen, render, userEvent } from "../../../../tests";
 
 describe("Tooltip", () => {
-  it("should see color code hidden", () => {
+  it("should render button", () => {
     render(<ButtonsSmall label="Save Colors">save</ButtonsSmall>);
     // 1. conteudo existe no component
     expect(screen.queryByText("save")).toBeInTheDocument();

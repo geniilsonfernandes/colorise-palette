@@ -1,0 +1,13 @@
+.header{
+    margin-top: 56px;
+    padding-top: 48px;
+}
+
+.head {
+    font-weight: normal;
+    font-size: 38px;
+    color: var(--clr-text-primary);
+}
+.grid{
+    margin-top: 48px;
+}

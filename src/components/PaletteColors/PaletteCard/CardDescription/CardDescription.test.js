@@ -1,26 +1,76 @@
 import CardDescription from "./CardDescription";
-import ButtonsSmall from '../../../Helpers/Buttons/ButtonsSmall/ButtonsSmall'
-//import Tooltip from '../../Tooltip/Tooltip'
 import "@testing-library/jest-dom/extend-expect";
-import { screen, render, userEvent } from "../../../../tests";
+import { screen, render, userEvent, cleanup } from "../../../../tests";
 import { BrowserRouter } from "react-router-dom";
-describe("Tooltip", () => {
-  it("should see color code hidden", () => {
-    const colorName = 'sky blue'
-    const Button = 'donwload'
-    const buttonLabel = 'donwload svg'
 
+const mockDownloadSVG = jest.fn();
+
+jest.mock("../../../../utilities/downloadSVG", () => ({
+  ___esModule: true,
+  downloadSVG: (colors, colorName) => mockDownloadSVG(colors, colorName),
+}));
+
+const mockIsFavorite = jest.fn(() => false);
+const mockToggleFavorite = jest.fn();
+
+// jest.mock("../../../../Hook/useFavorite", () => ({
+//   ___esModule: true,
+//   default: jest.fn(() => ({
+//     isFavorite: () => mockIsFavorite(),
+//     toggleFavorite: () => mockToggleFavorite(),
+//   }))
+// }));
+
+jest.mock('../../../../Hook/useFavorite', () => ({
+  default: () => ({
+     isFavorite: mockIsFavorite(),
+     toggleFavorite: mockToggleFavorite()
+  })
+}))
+
+
+describe("CardDescription", () => {
+  //afterEach(cleanup)
+  afterAll(() => jest.unmock('../../../../Hook/useFavorite'))
+
+  const colorName = "Sky Blue";
+  const colors = ["C3E0E5", "274472"];
+  it("should render buttons", () => {
     render(
       <BrowserRouter>
-        <CardDescription slug={colorName} /> 
-        <ButtonsSmall label={buttonLabel} > {Button} </ButtonsSmall>
+        <CardDescription slug={colorName} />
       </BrowserRouter>
     );
     // 1. see color name
     expect(screen.queryByText(colorName)).toBeInTheDocument();
-    //2. hover show tooltip
-    userEvent.hover(screen.queryByText(Button));
-    expect(screen.queryByText(buttonLabel)).toBeInTheDocument();
-        
-});
+  });
+
+  it("should donwload in button clicked", () => {
+    render(
+      <BrowserRouter>
+        <CardDescription colors={colors} slug={colorName} />
+      </BrowserRouter>
+    );
+
+    const downloadButton = screen.getByTestId("Download");
+    expect(downloadButton).toBeInTheDocument();
+
+    userEvent.click(downloadButton);
+    expect(mockDownloadSVG).toHaveBeenCalledWith(colors, colorName);
+  });
+
+  it("should toggleFavorite in button clicked", () => {
+    render(
+      <BrowserRouter>
+        <CardDescription colors={colors} slug={colorName} />
+      </BrowserRouter>
+    );
+
+    const downloadButton = screen.getByTestId("favorite");
+    expect(downloadButton).toBeInTheDocument();
+
+    userEvent.click(downloadButton);
+    expect(mockToggleFavorite).toHaveBeenCalled();
+  
+  });
 });

@@ -1,29 +1,29 @@
 import { useEffect, useState } from "react";
 
-export const useFavorite = () => {
-  const [colorsFavorites, setColorsFavorite] = useState([]);
+const useFavorite = () => {
+  const [colorsFavoritesId, setColorsFavorite] = useState([]);
 
   useEffect(() => {
-    const persistedColorsFavorite = localStorage.getItem("colorsFavorites");
-    const colorsFavorites = JSON.parse(persistedColorsFavorite);
-    setColorsFavorite(colorsFavorites || []);
+    const persistedColorsFavorite = localStorage.getItem("colorsFavoritesId");
+    const colorsFavoritesId = JSON.parse(persistedColorsFavorite);
+    setColorsFavorite(colorsFavoritesId || []);
   }, []);
 
   useEffect(() => {
-    const StringifiedColorsFavorite = JSON.stringify(colorsFavorites);
-    localStorage.setItem("colorsFavorites", StringifiedColorsFavorite);
-  }, [colorsFavorites]);
+    const StringifiedColorsFavorite = JSON.stringify(colorsFavoritesId);
+    localStorage.setItem("colorsFavoritesId", StringifiedColorsFavorite);
+  }, [colorsFavoritesId]);
 
   function toggleFavorite(id) {
     if (checkFavorite(id) === id) {
-      const filtered = colorsFavorites.filter((color) => color !== id);
+      const filtered = colorsFavoritesId.filter((color) => color !== id);
       setColorsFavorite(filtered);
     } else {
-      setColorsFavorite([...colorsFavorites, id]);
+      setColorsFavorite([...colorsFavoritesId, id]);
     }
   }
 
-  function isfavorite(id) {
+  function isFavorite(id) {
     if (checkFavorite(id) === id) {
       return true;
     } else {
@@ -32,9 +32,11 @@ export const useFavorite = () => {
   }
 
   function checkFavorite(id) {
-    const check = colorsFavorites.filter((color) => color === id);
+    const check = colorsFavoritesId.filter((color) => color === id);
     return check[0];
   }
 
-  return { colorsFavorites, toggleFavorite, isfavorite };
+  return { colorsFavoritesId, toggleFavorite, isFavorite };
 };
+
+export default useFavorite;

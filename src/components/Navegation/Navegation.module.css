@@ -35,9 +35,6 @@
 }
 
 @media screen and (max-width: 746px) {
-  .logo {
-    display: none;
-  }
   .search {
     padding-right: 8px;
   }

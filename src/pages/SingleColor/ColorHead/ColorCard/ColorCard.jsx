@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { copyToClipboard } from "../../../../utilities/copyToClipboard";
 import { hexToRgb } from "../../../../utilities/hexToRgb";
 import styles from "./ColorCard.module.css";
@@ -6,7 +6,6 @@ import styles from "./ColorCard.module.css";
 const ColorCard = ({ color }) => {
   const [colorCode, setColorCode] = useState(color);
   const [copied, setCopied] = useState(false);
-  const colorCodeText = useRef("");
 
   function handleClick(value) {
     setCopied(true);
@@ -26,15 +25,6 @@ const ColorCard = ({ color }) => {
         onMouseLeave={() => setCopied(false)}
       >
         <div className={styles.copy}>{colorCode}</div>
-        <input
-          type="text"
-          className={styles.clipboard}
-          value={color}
-          ref={colorCodeText}
-          onChange={(target) => (target.value = color)}
-          readOnly
-          tabIndex="-1"
-        />
       </div>
       <div className={styles.description}>
         <span className={styles.hex}>{`#${color}`}</span>

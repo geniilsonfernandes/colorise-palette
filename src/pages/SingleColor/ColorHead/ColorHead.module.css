@@ -4,6 +4,12 @@
   padding-bottom: 24px;
   z-index: 1;
   width: 100%;
+  
+
+}
+.head__info{
+  display: flex;
+  justify-content: space-between;
 }
 .head__info h2 {
   font-weight: 300;
@@ -20,7 +26,7 @@
 
 .color__grid {
   width: 100%;
- 
+
   display: flex;
   justify-content: space-between;
   gap: 4px;
@@ -28,10 +34,23 @@
   transition: 100ms linear;
 }
 
-[data-scroll="true"] {
-  height: 80px;
+.buttons {
+  display: flex;
+  gap: 8px;
 }
 
 .item {
   width: 100%;
+}
+
+
+
+@media screen and (max-width: 746px) {
+  .head__info{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 48px;
+  }
 }
