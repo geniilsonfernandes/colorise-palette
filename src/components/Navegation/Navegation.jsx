@@ -4,20 +4,27 @@ import { LogoIcon, FavoriteIcon } from "../icons/Icons";
 import ButtonsSmall from "../Helpers/Buttons/ButtonsSmall/ButtonsSmall";
 import SearchInput from "./SearchInput/SearchInput";
 import styles from "./Navegation.module.css";
-const Navegation = ( ) => {
+import { Link, useNavigate } from "react-router-dom";
+const Navegation = () => {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("favorites");
+  }
+
   return (
     <nav className={styles.nav}>
       <Container>
         <div className={styles.nav__container}>
           <div className={styles.logo}>
-            <LogoIcon />
+            <Link to="/">
+              <LogoIcon />
+            </Link>
           </div>
 
-          <div className={styles.search}>
-            <SearchInput placeholder="Search for color name or code" />
-          </div>
+          <div className={styles.search}>{false && <SearchInput placeholder="Search for color name or code" />}</div>
           <div className={styles.buttons}>
-            <ButtonsSmall>
+            <ButtonsSmall onClick={handleClick}>
               <FavoriteIcon />
             </ButtonsSmall>
           </div>

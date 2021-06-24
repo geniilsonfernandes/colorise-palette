@@ -5,11 +5,13 @@ import { screen, render, userEvent } from "../../../../tests";
 document.execCommand = jest.fn();
 
 describe("CardColorBar", () => {
-  it("should see color", () => {
-    const colorCode = "59981A"
-    render(<CardColorBar color={colorCode} />);
 
-    // 
+  const colorCode = "59981A";
+  
+  it("should copy text when hovered", () => {
+    render(<CardColorBar color={colorCode} />);
+    
+    // 1.
     expect(screen.queryByText(colorCode)).not.toBeInTheDocument();
 
     // 2. hover color
@@ -20,9 +22,10 @@ describe("CardColorBar", () => {
     // 3. copy color
     userEvent.click(cardColor);
     expect(screen.queryByText("Copied!")).toBeInTheDocument();
-    
+
     //4. onhover
     userEvent.unhover(cardColor);
     expect(screen.queryByText("Copied!")).not.toBeInTheDocument();
+    
   });
 });
