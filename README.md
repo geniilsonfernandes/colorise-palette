@@ -1,6 +1,8 @@
-# colorise app (REACT JS)
+# Colorise App (REACT JS)
 
-> Para melhorar minhas habilidade de criação de componentes para web decidi criar esse mini projeto como acervo pessoal
+> Projeto para estudo de react js, objetivo é testar minhas habilidades com a ferramenta em criação de componentes e interação com o usuário
+
+> Colorise App é um pequeno acervo de paletas de cores
 
 ## User story
 
