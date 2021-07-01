@@ -13,7 +13,7 @@
 
 ## features
 
--- Cada cor pode ser exibida em uma pagina porpria com mais detalhes da cor
--- Donwload em svg da paleta de cores
--- Projeto é responsivo
+- Cada cor pode ser exibida em uma pagina porpria com mais detalhes da cor
+- Donwload em svg da paleta de cores
+- Projeto é responsivo
 
