@@ -4,6 +4,8 @@
 
 > Colorise App é um pequeno acervo de paletas de cores
 
+> ver projeto ao vivo (https://colorise.netlify.app/)
+
 ## User story
 
 - Usuário pode salvar e remover as paletas de cores favoritas
