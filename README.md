@@ -4,7 +4,7 @@
 
 > Colorise App é um pequeno acervo de paletas de cores
 
-> ver projeto ao vivo (https://colorise.netlify.app/)
+> ver projeto ao vivo (https://colorise.vercel.app/)
 
 ## User story
 
