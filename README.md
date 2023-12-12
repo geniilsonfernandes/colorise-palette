@@ -10,7 +10,7 @@
 <h2 align="center" id="sobre-o-projeto">Sobre o projeto</h2>
 
   <p align="center">
-    <a href="https://colorise.vercel.app/">
+    <a href="https://colorise-palette.vercel.app/">
       Veja o projeto ao vivo
     </a>
   <p>
